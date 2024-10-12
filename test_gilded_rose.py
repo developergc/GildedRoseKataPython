@@ -29,8 +29,8 @@ class GildedRoseTest(unittest.TestCase):
     def test_conjured_fast_decrease(self):
         cur = [Item("Conjured Salad", 0, 8)]
         gr = GildedRose(cur)
-        assert cur[0].sell_in == -1
         gr.update_quality()
+        assert cur[0].sell_in == -1
         assert cur[0].quality == 4
 
 
